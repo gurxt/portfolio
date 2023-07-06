@@ -5,16 +5,20 @@
 html, 
 body {
   margin: 0;
-  overflow: hidden;
-  user-select: none;
+  width: 100vw;
+  height: 100vh;
 }
 #root {
-  height: 100vh;
-  width: 100vw;
-  margin: 0;
-  background-color: #fff
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
 }
 
-.app {
-  height: 100%;
+.main-container {
+  @apply flex items-center justify-center fixed z-50 w-full h-full bg-black bg-opacity-30;
+}
+
+.popup-container {
+  @apply h-full w-2/3 bg-white text-black;
 }

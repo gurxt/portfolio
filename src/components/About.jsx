@@ -1,8 +1,8 @@
 export default function About({ setPage }) {
   return (
-    <div>
+    <section className="popup-container">
       About 
       <button onClick={() => setPage("home")}>Leave Page</button>
-    </div>
+    </section>
   )
 }

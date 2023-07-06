@@ -1,8 +1,8 @@
 export default function Resume({ setPage }) {
   return (
-    <div>
-     Resume 
+    <section className="popup-container">
+      Resume 
       <button onClick={() => setPage("home")}>Leave Page</button>
-    </div>
+    </section>
   )
 }

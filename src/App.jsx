@@ -17,31 +17,33 @@ export default function App() {
 
   return (
     <>
-      { page === "courses" && <Courses setPage={setPage} /> }
-      { page === "about"   && <About   setPage={setPage} /> }
-      { page === "resume"  && <Resume  setPage={setPage} /> }
-      { page === "home"    && (
-        <>
-        <Canvas camera={{ position: cameraPosition }} shadows>
-          <ambientLight intensity={0.5} />
-          <pointLight position={[10, 10, 10]} />
-          <Table />
-          <Books   setPage={setPage}  />
-          <College setPage={setPage}  />
-          <Paper   setPage={setPage}  />
-          <Environment files="studio.hdr" background />
-          <OrbitControls 
-            enableZoom={false} 
-            enablePan={false} 
-            target={targetPosition} 
-            minPolarAngle={Math.PI / 6}
-            maxPolarAngle={Math.PI / 2}
-          />
-        </Canvas>
-        <Loader />
-        </>
+      { page !== "home" && (
+        <main className="main-container">
+        { page === "courses" && <Courses setPage={setPage} /> }
+        { page === "about"   && <About   setPage={setPage} /> }
+        { page === "resume"  && <Resume  setPage={setPage} /> }
+        </main>
       )}
+      <>
+      <Canvas camera={{ position: cameraPosition }} shadows>
+        <ambientLight intensity={0.5} />
+        <pointLight position={[10, 10, 10]} />
+        <Table />
+        <Books   setPage={setPage}  />
+        <College setPage={setPage}  />
+        <Paper   setPage={setPage}  />
+        <Environment files="studio.hdr" background />
+        <OrbitControls 
+          enableZoom={false} 
+          enablePan={false} 
+          target={targetPosition} 
+          minPolarAngle={Math.PI / 6}
+          maxPolarAngle={Math.PI / 2}
+        />
+      </Canvas>
+      <Loader />
+      </>
     </>
-  );
+  )
 }
 
