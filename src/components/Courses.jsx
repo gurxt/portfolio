@@ -1,8 +1,9 @@
-export default function Courses({ setPage }) {
+import Header from "./Header";
+
+export default function Courses({ setPage, setFadeOut }) {
   return (
     <section className="popup-container">
-      Courses 
-      <button onClick={() => setPage("home")}>Leave Page</button>
+      <Header title="College Course Information" setPage={setPage} setFadeOut={setFadeOut} />
     </section>
   )
 }

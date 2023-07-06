@@ -16,9 +16,41 @@ body {
 }
 
 .main-container {
-  @apply flex items-center justify-center fixed z-50 w-full h-full bg-black bg-opacity-30;
+  @apply flex flex-row items-center justify-center fixed z-50 w-full h-full bg-black bg-opacity-30 py-2;
 }
 
 .popup-container {
-  @apply h-full w-2/3 bg-white text-black;
+  @apply flex flex-col h-full w-1/2 bg-slate-100 text-black rounded-xl;
+}
+
+.header-container {
+  @apply flex flex-row w-full p-2 justify-end items-center bg-slate-400 bg-opacity-50 rounded-t-xl 
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.animate-fade-in {
+  animation-name: fade-in;
+  animation-duration: 1000ms; /* Adjust as needed */
+}
+
+.animate-fade-out {
+  animation-name: fade-out;
+  animation-duration: 1000ms; /* Adjust as needed */
 }

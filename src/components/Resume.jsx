@@ -1,8 +1,9 @@
-export default function Resume({ setPage }) {
+import Header from './Header'
+
+export default function Resume({ setPage, setFadeOut }) {
   return (
     <section className="popup-container">
-      Resume 
-      <button onClick={() => setPage("home")}>Leave Page</button>
+      <Header title="Resume" setPage={setPage} setFadeOut={setFadeOut} />
     </section>
   )
 }

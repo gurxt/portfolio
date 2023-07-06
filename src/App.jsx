@@ -14,14 +14,15 @@ export default function App() {
   const cameraPosition = [-2, -145, -5]; // Set the desired camera position
   const targetPosition = [0, -149, 0]; // Set the target position to look at
   const [page, setPage] = useState("home")
+  const [fadeOut, setFadeOut] = useState(false)
 
   return (
     <>
       { page !== "home" && (
-        <main className="main-container">
-        { page === "courses" && <Courses setPage={setPage} /> }
-        { page === "about"   && <About   setPage={setPage} /> }
-        { page === "resume"  && <Resume  setPage={setPage} /> }
+        <main className={`fade-container animate-fade-${ fadeOut ? 'out' : 'in' } main-container`}>
+        { page === "courses" && <Courses setPage={setPage} setFadeOut={setFadeOut} /> }
+        { page === "about"   && <About   setPage={setPage} setFadeOut={setFadeOut} /> }
+        { page === "resume"  && <Resume  setPage={setPage} setFadeOut={setFadeOut} /> }
         </main>
       )}
       <>
