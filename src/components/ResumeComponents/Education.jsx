@@ -2,9 +2,9 @@ export default function Edcuation() {
   return (
     <section className="education-section">
       <div className="education-item">
-        <div className="flex flex-col w-1/2 h-full object-contain">
+        <div className="flex flex-col w-1/2 h-full">
           <div className="flex flex-col items-center justify-center w-full h-1/4 bg-white rounded-tl-xl">
-            <img src="./src/assets/lighthouse-labs.png" className="w-2/3 h-1/2 object-contain" />
+            <img src="/src/assets/lighthouse-labs.png" className="w-2/3 h-1/2 object-contain" />
             <span className="text-xl italic">Full Stack Web Development Bootcamp</span>
             <span className="text-lg">622 King St. West, Toronto</span>
           </div>
@@ -24,16 +24,16 @@ export default function Edcuation() {
           </div>
         </div>
         <div className="h-full w-1/2 bg-blue-300 rounded-r-xl">
-          <img src="./src/assets/lighthouse-labs-background.jpg" className="object-contain h-full" />
+          <img src="/src/assets/lighthouse-labs-background.jpg" className="object-contain h-full" />
         </div>
       </div>
       <div className="education-item">
         <div className="h-full w-1/2 bg-green-300 rounded-l-xl">
-          <img src="./src/assets/algonquin-college-pembroke.jpg" className="object-contain h-full" />
+          <img src="/src/assets/algonquin-college-pembroke.jpg" className="object-contain h-full" />
         </div>
-        <div className="flex flex-col w-1/2 h-full object-contain">
+        <div className="flex flex-col w-1/2 h-full">
           <div className="flex flex-col items-center justify-center w-full h-1/4 bg-white rounded-tl-xl">
-            <img src="./src/assets/algonquin_college.png" className="w-2/3 h-1/2 object-contain" />
+            <img src="/src/assets/algonquin_college.png" className="w-2/3 h-1/2 object-contain" />
             <span className="text-xl italic">Computer Programming</span>
             <span className="text-lg">Pembroke, Ontario</span>
           </div>

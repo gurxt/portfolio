@@ -1,26 +1,4 @@
-/*
-Full Stack Web Development 
-	
-	Front End Technologies
-•	HTML, CSS, Bootstrap, jQuery, JavaScript, PHP
-•	React, React Native (Expo), React Three Fiber, Typescript, Redux 
-
-Back End Technologies
-•	MongoDB, Sanity, Firebase, GROQ, PostgreSQL, Elasticsearch, MySQL
-•	Express, NodeJS, Solidity, Ganache
-•	Netlify/Heroku for deployment and hosting
-
-Programming Languages
-
-•	Java 8 (Object-oriented language)
-•	JavaScript (Functional ES6 JavaScript on the browser, with NodeJS for runtime environments)
-•	BASH (shell scripting)
-•	Python (machine learning with the Jupyter Notebook—NumPy, SciPy, matplotlib, pandas, and mglearn)
-•	C++ (simple game development)
-•	Solidity (Ethereum smart contracts)
-*/
-
-import Scrollbars from "rc-scrollbars";
+import Scrollbars from "rc-scrollbars"
 
 export default function TechnicalSkills() {
   return (
@@ -37,12 +15,12 @@ export default function TechnicalSkills() {
           </ul>
         </div>
         <div className="flex justify-center items-center w-1/2 h-full bg-white rounded-r-xl">
-          <img src="./src/assets/front-end.jpg" className="object-contain" />
+          <img src="/src/assets/front-end.jpg" className="object-contain" />
         </div>
       </div>
       <div className="technical-item">
         <div className="flex justify-center items-center w-1/2 h-full bg-white rounded-l-xl">
-          <img src="./src/assets/back-end.png" className="object-contain" />
+          <img src="/src/assets/back-end.png" className="object-contain" />
         </div>
         <div className="flex flex-col w-1/2 bg-slate-800 rounded-r-xl">
           <h3 className="text-3xl bold text-center py-2 w-full bg-white rounded-tr-xl">Back-End</h3>
@@ -73,7 +51,7 @@ export default function TechnicalSkills() {
           </Scrollbars>
         </div>
         <div className="flex justify-center items-center w-1/2 h-full bg-white rounded-r-xl">
-          <img src="./src/assets/programming-languages.png" className="object-contain" />
+          <img src="/src/assets/programming-languages.png" className="object-contain" />
         </div>
       </div>
     </section>

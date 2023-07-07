@@ -34,12 +34,12 @@ export default function Experience() {
           </Scrollbars>
         </div>
         <div className="flex justify-center w-1/2 bg-green-300 rounded-r-xl">
-          <img src="./src/assets/shopify.png" className="object-contain" />
+          <img src="/src/assets/shopify.png" className="object-contain" />
         </div>
       </div>
       <div className="experience-item">
         <div className="flex justify-center w-1/2 bg-blue-300 rounded-l-xl">
-          <img src="./src/assets/walmart.png" className="w-3/5 object-contain" />
+          <img src="/src/assets/walmart.png" className="w-3/5 object-contain" />
         </div>
         <div className="flex flex-col w-1/2 bg-slate-200 rounded-r-xl">
           <h3 className="text-center text-2xl font-bold h-1/6 py-2 bg-blue-300 rounded-tr-xl">Online Orders Associate</h3>
@@ -66,7 +66,7 @@ export default function Experience() {
           </Scrollbars>
         </div>
         <div className="flex justify-center w-1/2 bg-red-300 rounded-r-xl">
-          <img src="./src/assets/mcdonalds.png" className="object-contain" />
+          <img src="/src/assets/mcdonalds.png" className="object-contain" />
         </div>
       </div>
     </section>
