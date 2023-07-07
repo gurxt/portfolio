@@ -108,7 +108,7 @@ body {
 }
 
 .experience-item {
-  @apply flex flex-row w-full h-1/3 mb-2;
+  @apply flex flex-row w-full h-2/5 mb-2;
 }
 
 

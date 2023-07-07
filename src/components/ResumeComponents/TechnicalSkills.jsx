@@ -6,6 +6,7 @@ import Languages from "/src/assets/programming-languages.png"
 export default function TechnicalSkills() {
   return (
     <section className="technical-section">
+      <Scrollbars autoHide>
       <div className="technical-item">
         <div className="flex flex-col w-1/2 bg-slate-800 rounded-l-xl">
           <h3 className="text-3xl bold text-center py-2 w-full bg-white rounded-tl-xl">Front-End</h3>
@@ -18,12 +19,12 @@ export default function TechnicalSkills() {
           </ul>
         </div>
         <div className="flex justify-center items-center w-1/2 h-full bg-white rounded-r-xl">
-          <img src={FrontEnd} className="object-contain" />
+          <img src={FrontEnd} className="h-64 w-64 object-contain" />
         </div>
       </div>
       <div className="technical-item">
         <div className="flex justify-center items-center w-1/2 h-full bg-white rounded-l-xl">
-          <img src={BackEnd} className="object-contain" />
+          <img src={BackEnd} className="h-64 w-64 object-contain" />
         </div>
         <div className="flex flex-col w-1/2 bg-slate-800 rounded-r-xl">
           <h3 className="text-3xl bold text-center py-2 w-full bg-white rounded-tr-xl">Back-End</h3>
@@ -39,7 +40,7 @@ export default function TechnicalSkills() {
       <div className="technical-item">
         <div className="flex flex-col w-1/2 bg-slate-800 rounded-l-xl">
           <h3 className="text-3xl bold text-center py-2 w-full bg-white rounded-tl-xl">Programming Languages</h3>
-          <Scrollbars>
+          <Scrollbars autoHide>
           <ul className="pl-6 list-disc text-white text-xl">
             <li>JavaScript/NodeJS</li>
             <li>PHP</li>
@@ -54,9 +55,10 @@ export default function TechnicalSkills() {
           </Scrollbars>
         </div>
         <div className="flex justify-center items-center w-1/2 h-full bg-white rounded-r-xl">
-          <img src={Languages} className="object-contain" />
+          <img src={Languages} className="h-64 w-64 object-contain" />
         </div>
       </div>
+      </Scrollbars>
     </section>
   )
 }

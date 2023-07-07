@@ -2,14 +2,16 @@ import AlgonquinBg from "/src/assets/algonquin-college-pembroke.jpg"
 import AlgonquinLogo from "/src/assets/algonquin_college.png"
 import LighthouseBg from "/src/assets/lighthouse-labs-background.jpg"
 import LighthouseLogo from "/src/assets/lighthouse-labs.png"
+import Scrollbars from "rc-scrollbars"
 
 export default function Edcuation() {
   return (
     <section className="education-section">
+      <Scrollbars autoHide>
       <div className="education-item">
-        <div className="flex flex-col w-1/2 h-full">
-          <div className="flex flex-col items-center justify-center w-full h-1/4 bg-white rounded-tl-xl">
-            <img src={LighthouseLogo} className="w-2/3 h-1/2 object-contain" />
+        <div className="flex flex-col w-1/2 h-full rounded-l-xl">
+          <div className="flex flex-col items-center justify-center w-full h-1/3 bg-white rounded-tl-xl">
+            <img src={LighthouseLogo} className="w-64 object-contain" />
             <span className="text-xl italic">Full Stack Web Development Bootcamp</span>
             <span className="text-lg">622 King St. West, Toronto</span>
           </div>
@@ -37,8 +39,8 @@ export default function Edcuation() {
           <img src={AlgonquinBg} className="object-contain h-full" />
         </div>
         <div className="flex flex-col w-1/2 h-full">
-          <div className="flex flex-col items-center justify-center w-full h-1/4 bg-white rounded-tl-xl">
-            <img src={AlgonquinLogo} className="w-2/3 h-1/2 object-contain" />
+          <div className="flex flex-col items-center justify-center w-full h-1/3 bg-white rounded-tr-xl">
+            <img src={AlgonquinLogo} className="w-64 object-contain" />
             <span className="text-xl italic">Computer Programming</span>
             <span className="text-lg">Pembroke, Ontario</span>
           </div>
@@ -57,6 +59,7 @@ export default function Edcuation() {
           </div>
         </div>
       </div>
+      </Scrollbars>
     </section>
   )
 }

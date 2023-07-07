@@ -16,6 +16,7 @@ import Valley2 from "/src/assets/valley-rides-2.png"
 import Valley3 from "/src/assets/valley-rides-3.png"
 import Valley4 from "/src/assets/valley-rides-4.png"
 import { useEffect, useState } from "react"
+import Scrollbars from "rc-scrollbars"
 
 const auracle = [ Auracle2, Auracle1, Auracle3, Auracle4 ]
 const valley_rides = [ Valley1, Valley2, Valley3, Valley4 ]
@@ -33,6 +34,7 @@ export default function Projects() {
 
   return (
     <section className="projects-section">
+      <Scrollbars autoHide>
       <div className="projects-item">
         <div className="flex flex-col w-1/2 bg-gray-300 rounded-l-xl">
           <h3 className="text-white text-3xl bold text-center py-2 w-full bg-slate-800 rounded-tl-xl">Auracle</h3>
@@ -48,12 +50,12 @@ export default function Projects() {
           </ul>
         </div>
         <div className="flex items-center justify-center w-1/2 bg-slate-800 rounded-r-xl">
-          <img src={auracle[image]} className="w-96 h-96 object-cover" />
+          <img src={auracle[image]} className="w-96 h-64 object-contain" />
         </div>
       </div>
       <div className="projects-item mt-2">
         <div className="flex h-full justify-center items-center w-1/2 bg-gray-800 rounded-l-xl">
-          <img src={valley_rides[image]} className="h-96 w-65 object-cover" />
+          <img src={valley_rides[image]} className="h-96 w-64 object-contain" />
         </div>
         <div className="flex flex-col w-1/2 bg-gray-300 rounded-r-xl">
           <h3 className="text-white text-3xl bold text-center py-2 w-full bg-gray-800 rounded-tr-xl">Valley Rides</h3>
@@ -68,6 +70,7 @@ export default function Projects() {
           </ul>
         </div>
       </div>
+      </Scrollbars>
     </section>
   )
 }
