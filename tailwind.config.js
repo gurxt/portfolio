@@ -2,7 +2,13 @@ export default {
   content: ["./src/**/*.{js,jsx}"],
   theme: {
       extend: {
-        'paper-bg': "('https://www.transparenttextures.com/patterns/paper-fibers.png')"
+        objectContain: {
+          'fill': 'fill',
+          'contain': 'contain',
+          'cover': 'cover',
+          'none': 'none',
+          'scale-down': 'scale-down',
+        },
       },
   },
   plugins: [],

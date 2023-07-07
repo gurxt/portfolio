@@ -47,13 +47,13 @@ export default function Projects() {
             <li>Built in React Native with redux for state management, tailwind for styling, and sanity with GROQ for data persistence</li>
           </ul>
         </div>
-        <div className="flex items-center w-1/2 h-full bg-slate-800 rounded-r-xl">
-          <img src={auracle[image]} className="h-4/5 w-full pb-2 object-contain" />
+        <div className="flex items-center justify-center w-1/2 bg-slate-800 rounded-r-xl">
+          <img src={auracle[image]} className="w-96 h-96 object-cover" />
         </div>
       </div>
       <div className="projects-item mt-2">
         <div className="flex h-full justify-center items-center w-1/2 bg-gray-800 rounded-l-xl">
-          <img src={valley_rides[image]} className="h-3/4 w-2/4 object-contain" />
+          <img src={valley_rides[image]} className="h-96 w-65 object-cover" />
         </div>
         <div className="flex flex-col w-1/2 bg-gray-300 rounded-r-xl">
           <h3 className="text-white text-3xl bold text-center py-2 w-full bg-gray-800 rounded-tr-xl">Valley Rides</h3>
