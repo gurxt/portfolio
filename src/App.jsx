@@ -4,7 +4,7 @@ import { Environment, Loader, OrbitControls } from "@react-three/drei"
 import { Table } from "./components/Table"
 import { Books } from "./components/Books"
 import { Paper } from "./components/Paper"
-import { College } from "./components/College"
+import { Person } from "./components/Person"
 import { useState } from "react"
 import Courses from "./components/Courses"
 import About from "./components/About"
@@ -31,7 +31,7 @@ export default function App() {
         <pointLight position={[10, 10, 10]} />
         <Table />
         <Books   setPage={setPage}  />
-        <College setPage={setPage}  />
+        <Person  setPage={setPage}  />
         <Paper   setPage={setPage}  />
         <Environment files="studio.hdr" background />
         <OrbitControls 

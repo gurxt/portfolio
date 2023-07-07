@@ -21,7 +21,12 @@ body {
 }
 
 .popup-container {
-  @apply flex flex-col h-full w-1/2 bg-slate-100 text-black rounded-xl bg-[url(https://www.transparenttextures.com/patterns/rice-paper-3.png)];
+  @apply flex flex-col h-full bg-slate-100 text-black rounded-xl bg-[url(https://www.transparenttextures.com/patterns/rice-paper-3.png)]
+  2xl:w-1/2
+  xl:w-2/3
+  lg:w-3/4
+  md:w-5/6
+  w-full;
 }
 
 .header-container {
@@ -30,6 +35,28 @@ body {
 
 .personal-information {
   @apply flex flex-row w-full h-full;
+}
+
+#about-txt-container p {
+  @apply px-4;
+}
+
+.animate-fade-in {
+  animation-name: fade-in;
+  animation-duration: 1000ms; /* Adjust as needed */
+}
+
+.animate-fade-out {
+  animation-name: fade-out;
+  animation-duration: 1000ms; /* Adjust as needed */
+}
+
+.resume-nav {
+  @apply flex flex-row justify-center items-center h-24 w-full bg-gray-400;
+}
+
+#resume-ul li {
+  @apply text-white text-xl text-center w-1/5;
 }
 
 @keyframes fade-in {
@@ -50,12 +77,3 @@ body {
   }
 }
 
-.animate-fade-in {
-  animation-name: fade-in;
-  animation-duration: 1000ms; /* Adjust as needed */
-}
-
-.animate-fade-out {
-  animation-name: fade-out;
-  animation-duration: 1000ms; /* Adjust as needed */
-}
