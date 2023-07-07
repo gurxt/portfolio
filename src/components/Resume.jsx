@@ -1,61 +1,10 @@
+import { useEffect, useState } from 'react'
 import Header from './Header'
 
 /*
-Anthony Pisani
-
-(416)-995-5011 - pisa0014@algonquincollege.com
-
-Education
-
-Full Stack Web Development – Lighthouse Labs – 622 King St. West, Toronto
-
-•	Completed 3-month full stack web development bootcamp from January-April 2021
-•	PERN stack – PostgreSQL, Express, React, Nodejs
-
-Computer Programming – Algonquin College – Pembroke, Ontario
-
-•	Currently enrolled (expected last semester in the Fall of 2024)
-•	Courses include – OOP (Java), Database (SQL), Operating Systems (Windows, Linux), Web Programming
-
-Technical Skills
-
-Full Stack Web Development 
-	
-	Front End Technologies
-•	HTML, CSS, Bootstrap, jQuery, JavaScript, PHP
-•	React, React Native (Expo), React Three Fiber, Typescript, Redux 
-
-Back End Technologies
-•	MongoDB, Sanity, Firebase, GROQ, PostgreSQL, Elasticsearch, MySQL
-•	Express, NodeJS, Solidity, Ganache
-•	Netlify/Heroku for deployment and hosting
-
-Programming Languages
-
-•	Java 8 (Object-oriented language)
-•	JavaScript (Functional ES6 JavaScript on the browser, with NodeJS for runtime environments)
-•	BASH (shell scripting)
-•	Python (machine learning with the Jupyter Notebook—NumPy, SciPy, matplotlib, pandas, and mglearn)
-•	C++ (simple game development)
-•	Solidity (Ethereum smart contracts)
-
 Projects https://github.com/gurxt
 
-Valley Drives (Mobile Application)
 
-•	Uses the google maps platform to connect users to taxis in the Ottawa Valley.
-•	Built in React Native with redux for state management, react navigation for seamless screen changes, nativewind for styling, stripe for user payments, and sanity with GROQ for data persistence. 
-
-Auracle (Mobile Application)
-
-•	Tarot based application that uses OpenAI APIs to conduct tarot readings for users.
-•	Images for the tarot deck creating using OpenAI DALL-E.
-•	Built in React Native with redux for state management, react navigation for seamless screen changes, nativewind for styling, and sanity with GROQ for data persistence. 
-	
-Economy (Solidity Application)
-
-•	A game-themed solidity project built to enable users to participate in a simulated digital economy.
-•	Leverages solidities ERC20 contracts to create tokens for the digital economy as well as ERC721 contracts to build assets.
 
 Work Experience
 
@@ -89,46 +38,59 @@ import {
   WrenchScrewdriverIcon,
   BriefcaseIcon
 } from '@heroicons/react/24/solid'
+import Contact from './ResumeComponents/Contact'
+import Edcuation from './ResumeComponents/Education'
+import TechnicalSkills from './ResumeComponents/TechnicalSkills'
+import Projects from './ResumeComponents/Projects'
+import Experience from './ResumeComponents/Experience'
 
 export default function Resume({ setPage, setFadeOut }) {
+  const [active, setActive] = useState("contact")
+
   return (
     <section className="popup-container">
       <Header title="Resume" setPage={setPage} setFadeOut={setFadeOut} />
       <nav className="resume-nav">
         <ul id="resume-ul" className="flex flex-row w-full justify-between">
-            <li className="flex flex-row justify-center items-center">
-              <button className="flex flex-col justify-center items-center">
-              <IdentificationIcon className="text-white w-12 h-12" />
-              Contact Info
+            <li className="flex flex-row h-full justify-center items-center">
+              <button onClick={() => setActive("contact")} className={`${active === "contact" ? 'text-green-200' : 'text-white'}`}>
+                <IdentificationIcon className="w-12 h-12" />
+                <span>Contact Info</span>
               </button>
             </li>
             <li className="flex flex-row justify-center items-center">
-              <button className="flex flex-col justify-center items-center">
-              <AcademicCapIcon className="text-white w-12 h-12" />
-              Education
+              <button onClick={() => setActive("education")} className={`${active === "education" ? 'text-green-200' : 'text-white'}`}>
+                <AcademicCapIcon className="w-12 h-12" />
+                <span>Education</span>
               </button>
             </li>
             <li className="flex flex-row justify-center items-center">
-              <button className="flex flex-col justify-center items-center">
-              <WrenchScrewdriverIcon className="text-white w-12 h-12" />
-              Technical Skills
+              <button onClick={() => setActive("technical")} className={`${active === "technical" ? 'text-green-200' : 'text-white'}`}>
+                <WrenchScrewdriverIcon className="w-12 h-12" />
+                <span>Technical Skills</span>
               </button>
             </li>
             <li className="flex flex-row justify-center items-center">
-              <button className="flex flex-col justify-center items-center">
-              <CodeBracketIcon className="text-white w-12 h-12" />
-              Projects
+              <button onClick={() => setActive("projects")} className={`${active === "projects" ? 'text-green-200' : 'text-white'}`}>
+                <CodeBracketIcon className="w-12 h-12" />
+                <span>Projects</span>
               </button>
             </li>
             <li className="flex flex-row justify-center items-center">
-              <button className="flex flex-col justify-center items-center">
-              <BriefcaseIcon className="text-white w-12 h-12" />
-              Work Experience
+              <button onClick={() => setActive("work")} className={`${active === "work" ? 'text-green-200' : 'text-white'}`}>
+                <BriefcaseIcon className="w-12 h-12" />
+                <span>Work Experience</span>
               </button>
             </li>
-
         </ul>
       </nav>
+      <div className="resume-content">
+        { active === "contact"   && <Contact /> }
+        { active === "education" && <Edcuation /> }
+        { active === "technical" && <TechnicalSkills /> }
+        { active === "projects"  && <Projects /> }
+        { active === "work"      && <Experience /> }
+      </div>
     </section>
   )
 }

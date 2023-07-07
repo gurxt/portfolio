@@ -9,7 +9,7 @@ export default function About({ setPage, setFadeOut }) {
       <div className="personal-information">
         <div className="flex flex-col justify-between w-2/5 h-full mt-2">
           <img src="./src/assets/mr-peanutbutter.jpg" className="h-2/5 w-full px-2 rounded-xl" />
-          <img src="./src/assets/attack_on_titan.gif" className="h-1/4 w-full px-2 rounded-xl" />
+          <img src="./src/assets/attack_on_titan.gif" className="w-full px-2 rounded-xl" />
         </div>
         <div className="flex flex-col w-3/5 h-full">
           <div id="about-txt-container" className="flex flex-col w-full h-4/5 mt-2 pl-3 text-lg">

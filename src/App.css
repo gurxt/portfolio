@@ -52,12 +52,65 @@ body {
 }
 
 .resume-nav {
-  @apply flex flex-row justify-center items-center h-24 w-full bg-gray-400;
+  @apply flex flex-row justify-center items-center h-24 w-full bg-gray-700;
 }
 
 #resume-ul li {
   @apply text-white text-xl text-center w-1/5;
 }
+
+#resume-ul li button {
+  @apply flex flex-col justify-center items-center;
+}
+
+#resume-ul li button:hover {
+  @apply text-blue-200;
+}
+
+.resume-content {
+  @apply flex flex-col flex-1 p-4 rounded-b-xl;
+}
+
+.contact-section {
+  @apply flex flex-col flex-1 text-3xl;
+}
+
+.contact-item {
+  @apply flex flex-row w-full justify-center items-center;
+}
+
+.education-section {
+  @apply flex flex-col flex-1 text-black;
+}
+
+.education-item {
+  @apply flex flex-row w-full h-1/2 bg-slate-100 mb-2 rounded-xl;
+}
+
+.technical-section {
+  @apply flex flex-1 flex-col;
+}
+
+.technical-item {
+  @apply flex flex-row w-full h-1/3 mb-2;
+}
+
+.projects-section {
+  @apply flex flex-1 flex-col;
+}
+
+.projects-item {
+  @apply flex flex-row w-full h-1/2;
+}
+
+.experience-section {
+  @apply flex flex-1 flex-col;
+}
+
+.experience-item {
+  @apply flex flex-row w-full h-1/3 mb-2;
+}
+
 
 @keyframes fade-in {
   from {
