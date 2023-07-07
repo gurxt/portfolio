@@ -1,6 +1,9 @@
 import { TypeAnimation } from "react-type-animation"
 import Header from "./Header"
 import Scrollbars from "rc-scrollbars"
+import Peanutbutter from "/src/assets/mr-peanutbutter.jpg"
+import AoT from "/src/assets/attack_on_titan.gif"
+import AC from "/src/assets/algonquin_college.png"
 
 export default function About({ setPage, setFadeOut }) {
   return (
@@ -8,8 +11,8 @@ export default function About({ setPage, setFadeOut }) {
       <Header title="About Me" setPage={setPage} setFadeOut={setFadeOut} />
       <div className="personal-information">
         <div className="flex flex-col justify-between w-2/5 h-full mt-2">
-          <img src="/src/assets/mr-peanutbutter.jpg" className="h-2/5 w-full px-2 rounded-xl" />
-          <img src="/src/assets/attack_on_titan.gif" className="w-full px-2 rounded-xl" />
+          <img src={Peanutbutter} className="h-2/5 w-full px-2 rounded-xl" />
+          <img src={AoT} className="w-full px-2 rounded-xl" />
         </div>
         <div className="flex flex-col w-3/5 h-full">
           <div id="about-txt-container" className="flex flex-col w-full h-4/5 mt-2 pl-3 text-lg">
@@ -56,7 +59,7 @@ export default function About({ setPage, setFadeOut }) {
             <div className="border-b-4 border-black mt-2 ml-2"></div>
             <div className="border-b-8 border-black mt-2 ml-2"></div>
             <a className="flex flex-1 items-center justify-end h-full" rel="noreferrer" href="http://algonquincollege.com" target="_blank">
-              <img src="/src/assets/algonquin_college.png" className="h-1/3 w-2/3 px-2 rounded-xl" />
+              <img src={AC} className="h-1/3 w-2/3 px-2 rounded-xl" />
             </a>
           </div>
         </div>
